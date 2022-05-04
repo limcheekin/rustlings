@@ -1,6 +1,6 @@
 // iterators4.rs
 
-// I AM NOT DONE
+// REF: https://stackoverflow.com/questions/60835646/how-do-i-create-a-non-recursive-calculation-of-factorial-using-iterators-and-ran
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return the factorial of num
@@ -12,6 +12,9 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+    let mut x = 1;
+    (1..=num).for_each(|i| x *= i);
+    x
 }
 
 #[cfg(test)]
